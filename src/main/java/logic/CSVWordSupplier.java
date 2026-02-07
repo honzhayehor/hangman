@@ -9,6 +9,7 @@ import java.util.List;
 public class CSVWordSupplier implements WordSupplier{
     private String CSV_PATH = "src/main/resources/words.csv";
 
+    @Override
     public List<String> supplyWords(int amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Error: Amount of requested words cannot be negative or zero");
