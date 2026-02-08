@@ -19,7 +19,6 @@ public class GameSystem {
     public GameSystem(SupplierType supplierType, Player pl, UserInputType uit) {
         player = pl;
         ws = WordSupplierFactory.getSupplier(supplierType);
-
         userInputHandler = UserInputFactory.getUserInput(uit);
     }
 
@@ -31,7 +30,7 @@ public class GameSystem {
         }
         wordHandler = new WordHandler(ws.supplyWords());
         attempts = wordHandler.getAvailableAttempts();
-
+        // TODO: Finish method
 
 
     }

@@ -1,13 +1,19 @@
 package render;
 
-public class CLIGameRenderer implements GameRenderer{
+import java.util.ArrayList;
+import java.util.List;
+
+public class CLIGameRenderer{
     public void renderWord(String word) {
         System.out.println(word);
     }
 
-    @Override
-    public void renderSurrounding() {
-        System.out.println("Hello world");
-    }
+
+    //TODO: Finish this class
+    public void renderSurrounding(int attemptsInitial, int attemptsCurrent) {}
+
+    private List<Character> getListOfAsciiValuesForCurrentAttempts(int attemptsInitial, int attemptsCurrent) {
+        return new ArrayList<>();
+    };
 
 }
