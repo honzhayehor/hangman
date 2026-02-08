@@ -6,6 +6,7 @@ import java.util.Set;
 public class WordHandler {
     private final String word;
     private final Set<Character> setOfCorrectLetters;
+    private int attempts;
 
     public WordHandler(String word) {
         this.word = validateWord(word);
@@ -44,7 +45,16 @@ public class WordHandler {
         if (!word.matches("[a-zA-Z]+") || word.length() <= 1) {
             throw new IllegalArgumentException("Error: Cannot start game using word that contains 1 or less letters");
         }
+        attempts =  (int) (word.length() * 1.25);
         return word.toLowerCase();
+    }
+
+    public int getAvailableAttempts() {
+        return attempts;
+    }
+
+    public void decreaseAvailableAttempts() {
+        attempts--;
     }
 
 }

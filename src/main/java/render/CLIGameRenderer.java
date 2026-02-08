@@ -10,5 +10,4 @@ public class CLIGameRenderer implements GameRenderer{
         System.out.println("Hello world");
     }
 
-
 }

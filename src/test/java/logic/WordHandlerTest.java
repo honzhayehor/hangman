@@ -2,8 +2,6 @@ package logic;
 
 import org.junit.jupiter.api.Test;
 
-import java.lang.System;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class WordHandlerTest {

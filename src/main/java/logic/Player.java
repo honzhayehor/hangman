@@ -7,11 +7,9 @@ public class Player {
         return wordHandler.offerLetter(c);
     }
 
-    public boolean isAlive() {
-        return isAlive;
-    }
-    public void setAlive(boolean alive) {
-        isAlive = alive;
+    public boolean isAlive() { return isAlive; }
+    public void die(boolean alive) {
+        isAlive = false;
     }
 
 }
