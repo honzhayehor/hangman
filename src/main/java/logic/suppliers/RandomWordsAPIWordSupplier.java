@@ -30,7 +30,9 @@ public class RandomWordsAPIWordSupplier implements WordSupplier {
     @Override
     public String supplyWords() {
 
-        URI uri = URI.create(BASE_URL + randomInt);
+        Random random = new Random();
+        int rand = random.nextInt(1, 20);
+        URI uri = URI.create(BASE_URL + rand);
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uri)
