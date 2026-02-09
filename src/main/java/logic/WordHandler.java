@@ -23,6 +23,15 @@ public class WordHandler {
         return wordMasked.toString();
     }
 
+    public boolean hasWon() {
+        for (char c : word.toLowerCase().toCharArray()) {
+            if (!setOfCorrectLetters.contains(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public boolean offerLetter(char c) {
         if (!Character.isLetter(c)) {
             throw new IllegalArgumentException("Error: You cannot offer anything that is not a letter");
