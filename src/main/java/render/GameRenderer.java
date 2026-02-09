@@ -1,6 +1,7 @@
 package render;
 
 public interface GameRenderer {
-    void renderWord(String word);
-    void renderSurrounding(int attemptsIn, int attemptsCur);
+    static void renderWord(String word) {
+        System.out.println(word);
+    }
 }
